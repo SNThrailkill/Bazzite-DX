@@ -6,7 +6,8 @@ set -ouex pipefail
 sysctl -p
 
 # Installs extra packages
-rpm-ostree install docker code
+rpm-ostree install docker-ce docker-ce-cli docker-buildx-plugin docker-compose-plugin
+rpm-ostree install code
 
 #### Enabling System Unit Files
 

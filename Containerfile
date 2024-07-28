@@ -47,6 +47,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY system_files/* /
+RUN ls -lah /etc/yum.repos.d
 COPY build.sh /tmp/build.sh
 
 RUN mkdir -p /var/lib/alternatives && \
